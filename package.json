@@ -1,13 +1,20 @@
 {
-  "name": "ai-font-identifier",
+  "name": "ai-font-identifier-backend",
   "version": "1.0.0",
-  "description": "AI-Powered Font Identifier using Groq Vision AI",
+  "description": "Backend API for AI Font Identifier using Groq Vision",
+  "main": "server.js",
   "scripts": {
-    "install:all": "npm install --prefix backend && npm install --prefix frontend",
-    "dev:backend": "npm run dev --prefix backend",
-    "dev:frontend": "npm run dev --prefix frontend",
-    "build:frontend": "npm run build --prefix frontend",
-    "start": "npm start --prefix backend"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "groq-sdk": "^0.3.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   },
   "engines": {
     "node": ">=18.0.0"
